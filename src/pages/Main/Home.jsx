@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../../components/ProductCard";
+import { useDispatch } from "react-redux";
+import { filterAction, toggleBrand } from "../../redux/actions/filterAction";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
@@ -20,10 +22,10 @@ const Home = () => {
         >
           In Stock
         </button>
-        <button className={`border px-3 py-2 rounded-full font-semibold`}>
+        <button onClick={()=>dispatch(toggleBrand("amd"))} className={`border px-3 py-2 rounded-full font-semibold`}>
           AMD
         </button>
-        <button className={`border px-3 py-2 rounded-full font-semibold`}>
+        <button onClick={()=>dispatch(toggleBrand("intel"))} className={`border px-3 py-2 rounded-full font-semibold`}>
           Intel
         </button>
       </div>
