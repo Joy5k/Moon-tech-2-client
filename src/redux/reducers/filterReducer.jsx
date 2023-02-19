@@ -30,7 +30,13 @@ export const filterReducer = (state=initialState,action)=>{
                 };
            }
         case TOGGLE_STOCK:
-            return {};
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    stack:!state.filters.stack
+    }
+            };
         default:
             return state;
     }
