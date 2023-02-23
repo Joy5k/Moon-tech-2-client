@@ -7,7 +7,7 @@ export const toggleBrand = (brandName) => {
         
     }
 }
-export const toggleStack = () => {
+export const toggleStock = () => {
     return {
         type: TOGGLE_STOCK,        
     }
