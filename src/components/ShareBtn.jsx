@@ -3,7 +3,7 @@ import React from 'react';
 const ShareBtn = ({data}) => {
     return (
         <div>
-            <Button>{ data}</Button>
+            <button className='btn bg-blue-500'>{data}</button>
         </div>
     );
 };
