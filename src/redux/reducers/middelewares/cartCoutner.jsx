@@ -6,6 +6,10 @@ const cartCounter = (store) => (next) => (action) => {
     console.log(cart,'this is cart ');
     
     if (action.type === ADD_TO_CART) {
+        const newAction = {
+            ...action,
+            payload:{...action.payload,cartPosition:cart.length}
+        }
     return
     }
     return next(action)
