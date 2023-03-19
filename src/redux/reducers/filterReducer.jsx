@@ -1,5 +1,5 @@
 
-import { ADD_PRODUCT, LOAD_PRODUCT, TOGGLE_BRAND, TOGGLE_STOCK } from "../actionTypes/actionTypes";
+import { ADD_PRODUCT, TOGGLE_BRAND, TOGGLE_STOCK } from "../actionTypes/actionTypes";
 
 export const initialState = {
   filters: {
