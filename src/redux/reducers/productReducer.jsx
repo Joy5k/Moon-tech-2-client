@@ -13,8 +13,9 @@ const initialState = {
 };
 
 const productReducer = (state = initialState, action) => {
+  console.log(state,'check the _id in the state',action.payload);
   const selectedProduct = state.cart.find(
-    (product) => product._id === action.payload._id
+    (product) => product?._id === action.payload._id
   );
 
   switch (action.type) {

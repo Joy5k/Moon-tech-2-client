@@ -7,6 +7,7 @@ import About from "../pages/Main/About";
 import Cart from "../pages/Main/Cart";
 import Home from "../pages/Main/Home";
 import TopRated from "../pages/Main/TopRated";
+import Wishlist from "../pages/Main/Wishlist";
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "wishlist",
+        element: <Wishlist />,
       },
     ],
   },
