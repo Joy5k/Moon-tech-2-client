@@ -6,7 +6,10 @@ import loadProductData from "../../redux/thunk/products/fetchProducts";
 
 const Home = () => {
   const filters = useSelector(state => state.filter.filters)
-  const products = useSelector(state => state.product.products)
+  const products = useSelector(state => {
+    console.log(state);
+  return  state.product.products
+  });
   const { brands,stock } = filters;
   const dispatch = useDispatch();
 
